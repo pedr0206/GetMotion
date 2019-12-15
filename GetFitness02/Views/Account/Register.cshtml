@@ -1,0 +1,42 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+    <div class="row">
+        <div>
+            <h4 style="font-family:'Saira Stencil One', cursive; font-size:2rem; text-align: center;">Get Start</h4>
+            <p style="text-align: center; margin:20px">Create a new account</p>
+        </div>
+
+        <div style="display:flex; justify-content:center; background:black; padding:50px 20px; padding-bottom:50px; color:white;">
+            <div>
+                <div asp-validation-summary="ModelOnly" style="color:red; font-size:0.8rem; list-style:none; text-align:center; list-style-type:none!important;"></div>
+                <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" style="">
+                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                    <div class="form-group" style="margin-bottom:10px;">
+                        <label asp-for="Email" style="width:200px; display:inline-block;"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger" style="color:red; font-size:0.8rem;"></span>
+                    </div>
+                    <div class="form-group" style="margin-bottom:10px;">
+                        <label asp-for="Password" style="width:200px; display:inline-block;"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger" style="color:red; font-size:0.8rem;"></span>
+                    </div>
+                    <div class="form-group" style="margin-bottom:10px;">
+                        <label asp-for="ConfirmPassword" style="width:200px; display:inline-block;"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger" style="color:red; font-size:0.8rem;"></span>
+                    </div>
+                    <div class="form-group btn-submit">
+                        <button type="submit" class="btn btn-default">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="btn-submit">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
+        </div>
+    </div>
+

@@ -1,0 +1,51 @@
+﻿@model GetFitness02.Models.Activity.ActivityItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center; font-size:1.5rem;">Activity Details</h1>
+
+<div>
+    @*<h4 style="padding-left: 20px;">ActivityItem</h4>*@
+    @*<dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ActivityName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ActivityName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calorie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calorie)
+        </dd>
+    </dl>*@
+    <table style="width: 100%; background-color:black;">
+        <thead>
+            <tr style="text-align:left; color:white;">
+                <th style="padding-right: 70px; width: 50%;">Activity
+                    @*@Html.DisplayNameFor(model => model.ActivityName)*@
+                </th>
+                <th>MET
+                    @*@Html.DisplayNameFor(model => model.Calorie)*@
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: white;">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ActivityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Calorie)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div style="text-align:center; padding-top:20px;">
+    <a asp-action="Edit" asp-route-id="@Model.ActivityItemId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,56 @@
+﻿@using System.Collections.Generic;
+@using System.Linq;
+@using Microsoft.AspNetCore.Http;
+@*@using Microsoft.AspNetCore.Http.Authentication;*@
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<br />
+<div id="top-box">
+    <br>
+    <div class="grid-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div><p class="logo logochange">GET</p></div>
+        <div style="text-align: left; padding-left: 2%;">
+            <p class="text-frontpage">every  motion calculated </p>
+            <p style="margin-top: 0; margin-bottom: 0;"> result of <span style="color:#EE882A;">calories</span> burned </p>
+            <a asp-controller="ActivityEntries" asp-action="Create" class="btn button">New Activity</a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div>
+        <h4 style="font-family:'Saira Stencil One', cursive; font-size:2rem; text-align: center;">Get Start</h4>
+    </div>
+    <div style="display:flex; justify-content:center; background:black; padding-top:50px; padding-bottom:50px; color:white;">
+        <div>
+            <div asp-validation-summary="ModelOnly" style="color:red; font-size:0.8rem; list-style:none; text-align:center; list-style-type:none!important;"></div>
+            <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" style="">
+                <div class="form-group" style="margin-bottom:10px;">
+                    <label asp-for="Email" style="width:100px; display:inline-block;"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger" style="color:red; font-size:0.8rem;"></span>
+                    <span asp-validation-summary="All"></span>
+                </div>
+                <div class="form-group" style="margin-bottom:10px;">
+                    <label asp-for="Password" style="width:100px; display:inline-block;"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger" style="color:red; font-size:0.8rem;"></span>
+                </div>
+                <div class="form-group btn-submit">
+                    <button type="submit" class="btn btn-default">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div style="text-align:center; padding-top:20px;">Need an account? <strong><a asp-area="" asp-controller="Account" asp-action="Register">Register here</a></strong></div>
+    </div>
+</div>

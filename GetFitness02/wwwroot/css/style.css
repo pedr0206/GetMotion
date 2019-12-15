@@ -1,0 +1,484 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Saira', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}
+
+!ul {
+    list-style: none;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+nav ul .link {
+    float: right;
+    margin: 12px 5% 0 2%;
+}
+nav ul .link a {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Saira', sans-serif;
+    color: #000000;
+}
+.logo {
+    font-family: 'Saira Stencil One';
+    font-size: 2.5em;
+}
+
+#top-box {
+    background-image: url("../images/motion1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding-bottom: 5%;
+    padding-top: 10%;
+    background-position-y: 50px;
+    background-attachment: fixed;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 26% 20% 54% ;
+    grid-gap: 10px;
+    margin: 0 9% 0 9%;
+    grid-template-rows: 100px auto;
+    border: 4px solid #fff;
+}
+.grid-container > div {
+    text-align: center;
+    font-size: 2.4em;
+    color:#fff;
+}
+p {
+    font-family: 'Saira', 'sans-serif';
+}
+.logochange {
+    font-size: 2.6em;
+    float: right;
+    margin-top: 0;
+}
+.text-frontpage {
+    margin-top: 3%;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 0;
+    width: 65%;
+}
+.btn {
+    font-family: 'Saira', 'sans-serif';
+    background: #EE882A;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1%;
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+}
+
+.btn a {
+    font-family: 'Saira', 'sans-serif';
+    text-decoration: none;
+}
+
+.btn:hover {
+    color:#2d2828;
+    background: #ee882abf;
+}
+a.btn.button {
+    font-family: 'Saira', 'sans-serif';
+    font-size: 0.4em;
+}
+#box2 {
+    margin-top: 4%;
+    text-align: center;
+}
+#box2 p {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#box3 {
+    margin-top: 5%;
+    background-image: url("../images/motion3.jpg");
+    background-attachment: fixed;
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+}
+.grid-box3 {
+     display: grid;
+     grid-template-columns: 5% 90% 5%;
+     grid-gap: 10px;
+     margin: 2% 9% 0 9%;
+     grid-template-rows: 100px 250px;
+ }
+.grid-box3 > div{
+    font-size: 2.8em;
+ }
+#picture {
+    text-align: center;
+}
+.text-box3 {
+    color:#EE882A;
+    text-shadow: 2px 1px #000;
+    font-weight: bold;
+    font-family: 'Saira', 'sans-serif';
+}
+.overlaybox3 {
+    background: #00000094;
+    color: #fff;
+    padding: 5%;
+}
+.overlaybox3 p{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 12% 0 12%;
+}
+
+.validation-summary-errors ul li {
+    list-style-type: none !important;
+}
+
+.control-label {
+    width: 120px;
+}
+
+div.btn-submit {
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.tableImage {
+    margin-top: 5%;
+    background-image: url("../images/Exercise.jpg");
+    background-attachment: fixed;
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+}
+
+a.btn-submit, button.btn-submit, input.btn-submit {
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    font-family: 'Saira', 'sans-serif';
+    background: #EE882A;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+}
+
+.back-to-list {
+    text-align: center; 
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.img-profile{
+    text-align: center;
+    margin: 2rem;
+}
+/*Text styling*/
+h1.text {
+    font-family: 'Saira Stencil One';
+    text-align: center;
+    padding-left: 20px;
+    font-size: 1.5em;
+}
+
+a.text {
+    text-align: center;
+    font-family: 'Saira', 'sans-serif';
+}
+
+/*Table styling*/
+
+
+table {
+    margin: 5rem auto;
+    text-align: center;
+    font-family: 'Arial';
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #00cccc;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.10), 0px 10px 20px rgba(0,0,0,0.05), 0px 20px 20px rgba(0,0,0,0.05), 0px 30px 20px rgba(0,0,0,0.05);
+    background: #f4f4f4;
+}
+
+td {
+    color: #555;
+}
+
+tr:hover {
+    background: #ffebd9;
+}
+
+th, td {
+    color: #999;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+}
+
+th {
+    background: #fcbd83;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    &.last
+}
+
+p.add-entry {
+    text-align: center;
+}
+
+
+
+/* Table queries */
+@media only screen and (max-device-width: 768px) {
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul #logo {
+        width: 36%;
+    }
+
+    nav ul .link {
+        margin: 14px 5% 0 1%;
+    }
+
+    nav ul .link a {
+        font-size: 1.2em;
+     }
+
+    .logo > img {
+        width: 100%;
+    }
+
+    #top-box {
+        background-attachment: unset;
+        padding-top: 15%;
+        padding-bottom: 0;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+        nav ul #logo {
+            width: 36%;
+        }
+
+        nav ul .link {
+            margin: 4px 5% 0 1%;
+        }
+
+            nav ul .link a {
+                font-size: 0.7em;
+            }
+
+    .logo > img {
+        width: 100%;
+    }
+
+    #top-box {
+        background-attachment: unset;
+        padding-top: 15%;
+        padding-bottom: 10%;
+        background-position-y: 100px;
+    }
+
+    .grid-container {
+        grid-template-columns: 20% 16% 54%;
+        margin: 0 5% 0 5%;
+        grid-template-rows: 20px auto;
+        padding-bottom: 5%;
+    }
+
+    #box2 > form > input.btn {
+        padding: 2%;
+        font-size: 1.3em;
+    }
+
+    #box3 {
+        padding: 0;
+    }
+
+    #picture {
+        height: auto;
+    }
+
+    .grid-box3 {
+        margin: 0;
+        grid-template-rows: 50px 150px;
+    }
+
+   .button {
+        font-size: 0.6em;
+    }
+
+    .btn {
+        font-size: 0.6em;
+    }
+
+    .overlaybox3 {
+        background: #00000094;
+        
+    }
+
+        .overlaybox3 p {
+            font-size: 1em;
+            margin: 0 12% 0 12%;
+        }
+
+    .grid-container > div {
+        font-size: 1.4em;
+    }
+
+    .logochange {
+        font-size: 2em;
+    }
+
+    #box3 {
+        height: 100%;
+        background-attachment: unset;
+    }
+
+    .grid-box3 > div {
+        font-size: 1.5em;
+    }
+
+    .hide-on-s {
+        display: none;
+    }
+
+    .show-on-s {
+        display: grid;
+        max-width: 100%;
+    }
+
+    th, td {
+        padding: 1rem;
+    }
+}
+
+/* Mobile queries */
+@media only screen and (max-device-width: 400px) {
+    nav ul {
+        padding-left: 0;
+    }
+
+        nav ul #logo {
+            width: 36%;
+        }
+
+        nav ul .link {
+            margin: 16px 2% 0 2%;
+        }
+
+            nav ul .link a {
+                font-size: 0.7em;
+            }
+
+    .logo > img {
+        width: 100%;
+    }
+
+    #top-box {
+        background-attachment: unset;
+        padding-top: 30%;
+    }
+    .text-frontpage {
+        width: 100%;
+    }
+    .grid-container {
+        grid-template-columns: 20% 16% 54%;
+        margin: 0 5% 0 5%;
+        grid-template-rows: 20px auto;
+        padding-bottom:5%;
+    }
+    #box2 > form > input.btn {
+        padding: 2%;
+        font-size: 1.3em;
+    }
+    #box2 p {
+        font-weight: bold;
+        font-size: 1em;
+    }
+    #box3 {
+        padding: 0;
+    }
+    #picture {
+        height: auto;
+    }
+    .grid-box3 {
+        margin: 0;
+        grid-template-rows: 50px 150px;
+    }
+    
+    .btn.button {
+        padding: 2%;
+        font-size: 0.6em;
+        
+    }
+    .btn {
+        font-size:0.6em;
+    }
+    .overlaybox3 {
+        background: #00000094; ;
+    }
+        .overlaybox3 p {
+            font-size: 1em;
+            margin: 0 12% 0 12%;
+        }
+    .grid-container > div {
+        font-size: 1.4em;
+    }
+    .logochange {
+        font-size: 2em;
+    }
+    #box3 {
+        height: 100%;
+        background-attachment: unset;
+    }
+    .grid-box3 > div {   
+        font-size: 1.5em;
+    }
+    .hide-on-s, .hide-on-sm {
+        display: none;
+    }
+
+    .show-on-s {
+        display: grid;
+        max-width: 100%;
+    }
+
+    th, td {
+        padding: .3rem;
+    }
+}

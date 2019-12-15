@@ -1,0 +1,39 @@
+﻿@model GetFitness02.Models.Activity.ActivityItem
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 style="text-align:center; font-size:1.5rem;">Delete</h1>
+
+<h3 style="text-align:center;">Are you sure you want to delete this activity?</h3>
+<div>
+    <table style="width: 100%; background-color:black;">
+        <thead>
+            <tr style="text-align:left; color:white;">
+                <th style="padding-right: 70px; width: 50%;">
+                    Activity@*@Html.DisplayNameFor(model => model.ActivityName)*@
+                </th>
+                <th>
+                    MET@*@Html.DisplayNameFor(model => model.Calorie)*@
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: white;">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ActivityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Calorie)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form asp-action="Delete" style="text-align:center; padding-top:20px;">
+        <input type="hidden" asp-for="ActivityItemId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

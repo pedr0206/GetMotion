@@ -1,0 +1,92 @@
+﻿@model GetFitness02.Models.Activity.ActivityEntry
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center; font-size:1.5rem;">Activity Details</h1>
+
+
+
+<div>
+    <div>
+        @*<dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Height)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Height)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Weight)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Weight)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ActivityItem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ActivityItem.ActivityItemId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ApplicationUser.Id)
+            </dd>
+        </dl>*@
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr style="text-align:left; color:white;">
+                <th style="padding-right: 70px; width: 50%;">
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    Activity
+                    @*@Html.DisplayNameFor(model => model.ActivityItem)*@
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)<span>(min)</span>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)<span>(kg)</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: white;">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ActivityItem.ActivityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Weight)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="back-to-list">
+    <a asp-action="Edit" asp-route-id="@Model.ActivityEntryId"><img src="~/images/pencil-edit-button.png" width="24"></a> |
+    <a asp-action="Index">Back to List</a>
+</div>

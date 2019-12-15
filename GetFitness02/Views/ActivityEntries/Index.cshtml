@@ -1,0 +1,88 @@
+﻿@model IEnumerable<GetFitness02.Models.Activity.ActivityEntry>
+@using Microsoft.AspNetCore.Identity
+@using GetFitness02.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="show-on-s">
+    @if (SignInManager.IsSignedIn(User))
+    {
+    <div class="tableImage">
+        <br />
+        <br />
+        <div >
+            <h1 class="text">Your Activity Board</h1>
+
+            <div class="btn-submit">
+                <a asp-action="Create" class="btn-submit">Add Entry</a>
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th class="hide-on-s">
+                                @Html.DisplayNameFor(model => model.Date)
+                            </th>
+                            <th>
+                                Activity
+                                @*@Html.DisplayNameFor(model => model.ActivityItem)*@
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Duration)<span>(min)</span>
+                            </th>
+                            <th class="hide-on-s">
+                                @Html.DisplayNameFor(model => model.Weight)<span>(kg)</span>
+                            </th>
+                            <th>
+                                Calories burned(kcal)
+                            </th>
+                            <th class="hide-on-sm">
+                                Options
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="hide-on-s">
+                                    @Html.DisplayFor(modelItem => item.Date)
+                                </td>
+                                <td class="tableText">
+                                    @Html.DisplayFor(modelItem => item.ActivityItem.ActivityName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Duration)
+                                </td>
+                                <td class="hide-on-s">
+                                    @Html.DisplayFor(modelItem => item.Weight)
+                                </td>
+                                <td>@((item.Weight * item.ActivityItem.Calorie) * (item.Duration) / 60)</td>
+                                <td class="hide-on-sm">
+                                    <a asp-action="Edit" asp-route-id="@item.ActivityEntryId"><img src="~/images/pencil-edit-button.png" width="16"></a> |
+                                    <a asp-action="Details" asp-route-id="@item.ActivityEntryId"><img src="~/images/check-list.png" width="16"></a> |
+                                    <a asp-action="Delete" asp-route-id="@item.ActivityEntryId"><img src="~/images/delete.png" width="16"></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+       
+    </div>
+        
+    }
+    else
+    {
+        <div>
+            <div style="text-align:center; padding-left:20px;">Already have an account?<strong><a asp-area="" asp-controller="Account" asp-action="Login"> Log in</a></strong></div>
+        </div>
+    }
+</div>
+

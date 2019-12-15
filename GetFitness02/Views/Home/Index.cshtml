@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<br />
+<div id="top-box">
+    <br>
+    <div class="grid-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div><p class="logo logochange">GET</p></div>
+        <div style="text-align: left; padding-left: 2%;">
+            <p class="text-frontpage">every  motion calculated </p>
+            <p style="margin-top: 0; margin-bottom: 0;"> result of <span style="color:#EE882A;">calories</span> burned </p>
+            <a asp-controller="ActivityEntries" asp-action="Create" class="btn button">New Activity</a>
+        </div>
+    </div>
+</div>
+<div>
+    <h4 style="font-family: 'Saira Stencil One', cursive; text-align:center; font-size:1.5rem; margin:1rem;">Let's Get Started</h4>
+</div>
+
+<!--- the white box -->
+<div id="box2">
+    <a asp-controller="ActivityEntries" asp-action="Create" class="btn">New Activity</a>
+</div>
+<div id="box3">
+    <div id="picture">
+        <div class="grid-box3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+                <span class="logo" style="color: #fff; text-align: center; text-shadow: 1px 1px #000;">GET</span>
+                <span class="text-box3"> helps you to calculate the calories burned </span>
+            </div>
+        </div>
+        <div class="overlaybox3">
+            <p>
+                GET all your workout tracked. You can add activities and get an overview of your workout plan. In adition,
+                calories burned are calculated by the exercises you do and stimulate you to keep on track of your workout plan.
+            </p>
+            <br>
+            <hr style="background: #fff; width: 100px; height: 2px">
+        </div>
+
+    </div>
+</div>
+<!-- Slider starts --->
+<div class="slideshow-container">
+    <!--Image 1 -->
+    <div class="mySlides fade">
+        <img src="~/images/inphographic.jpg" asp-append-version="true" style="width:100%"/>
+    </div>
+    <!-- Image 2-->
+    <div class="mySlides fade">
+        <img src="~/images/inphographic-yoga.jpg" asp-append-version="true" style="width:100%"/>
+    </div>
+    <!-- Image 3 -->
+    <div class="mySlides fade">
+        <img src="~/images/infographic-bad-skate.jpg" asp-append-version="true" style="width:100%"/>
+    </div>
+    <!-- Arrows to swift between image -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<!-- the dots to swift throw images  -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+

@@ -1,0 +1,86 @@
+﻿@model GetFitness02.Models.Activity.ActivityEntry
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 style="text-align:center; font-size:1.5rem;">Delete</h1>
+
+<h3 style="text-align:center;">Are you sure you want to delete this activity?</h3>
+<div>
+    <div>
+        @*<dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Weight)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Weight)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ActivityItem.ActivityName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ActivityItem.ActivityName)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ApplicationUser.Id)
+            </dd class>
+        </dl>*@
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr style="text-align:left; color:white;">
+                <th style="padding-right: 70px; width: 50%;">
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ActivityItem.ActivityName)
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: white;">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ActivityItem.ActivityName)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <form asp-action="Delete" class="back-to-list">
+        <input type="hidden" asp-for="ActivityEntryId" />
+        <button type="submit" value="Delete" style="background: none; border: none;"><img src="~/images/delete.png" width="16"></button> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

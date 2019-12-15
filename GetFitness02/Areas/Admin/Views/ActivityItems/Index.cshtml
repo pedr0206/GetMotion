@@ -1,0 +1,44 @@
+﻿@model IEnumerable<GetFitness02.Models.Activity.ActivityItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="padding-left: 20px; font-size:1.5rem;">Metabolic Equivalent of Activity</h1>
+
+<p style="padding-left: 20px;">
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="width: 100%; background-color:black;">
+    <thead>
+        <tr style="text-align:left; color:white;">
+            <th style="padding-right: 70px;">
+                Activity
+                @*@Html.DisplayNameFor(model => model.ActivityName)*@
+            </th>
+            <th>
+                MET
+                @*@Html.DisplayNameFor(model => model.Calorie)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody style="background-color: white;">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActivityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calorie)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ActivityItemId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ActivityItemId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ActivityItemId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

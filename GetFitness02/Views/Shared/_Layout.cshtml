@@ -1,0 +1,57 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@using GetFitness02
+@using System.Collections.Generic;
+@using System.Linq;
+@namespace GetFitness02
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link asp-href-include="~/css/style.css" rel="stylesheet" />
+    <link asp-href-include="~/css/imageslider.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Saira:400,700&display=swap" rel="stylesheet">
+
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login" style="float:right;">
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+
+        <!--Navigation Menu-->
+        <nav>
+            <ul>
+                <li id="logo"><a asp-controller="Home" asp-action="Index" class="logo"><img src="~/images/logo.png" alt="logo" /></a></li>
+                <li class="link"><a asp-controller="ApplicationUser" asp-action="Index">Profile</a></li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="link"><a asp-controller="ActivityEntries" asp-action="Index">Board</a></li>
+                }
+                else
+                {
+                    <li class="link"><a asp-area="" asp-controller="Account" asp-action="Login">Board</a></li>
+                }
+
+                <li class="link"><a asp-controller="ActivityEntries" asp-action="Create">New activity </a></li>
+            </ul>
+        </nav>
+        <br />
+        <br />
+
+        @*<div class="navbar-collapse collapse">
+                <div style="float:left;"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></div>
+            </div>*@
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Scripts", false)
+
+    <script src="~/javascript/slide.js" asp-append-version="true"></script>
+</body>
+</html>
